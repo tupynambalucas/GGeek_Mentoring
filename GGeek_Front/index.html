@@ -14,6 +14,10 @@
     <!-- Panel -->
     <link rel="stylesheet" href="css/panel/main.css">
     <link rel="stylesheet" href="css/panel/sidebar.css">
+
+    <!-- Panel Screens -->
+    <link rel="stylesheet" href="css/panel/screens/register-customer.css">
+    <link rel="stylesheet" href="css/panel/screens/register-product.css">
 </head>
 <body>
     <section id="login-view" class="login">
@@ -33,7 +37,7 @@
         </form>
     </section>
     <section id="panel-view" class="panel hidden">
-        <nav class="panelSidebar">
+        <nav class="panel-sidebar">
             <header>
                 <img class="logo" src="assets/img/logo/LogoGG.png" alt="Logo GG">
             </header>
@@ -85,11 +89,86 @@
             </footer>
         </nav>
         <main>
-            <section id="register-customer" class="content-section">
-                <h1>Cadastrar Cliente</h1>
+            <section id="register-customer" class="register-customer content-section">
+                <form>
+                    <h1>Cadastrar Cliente</h1>
+                    <div>
+                        <div>
+                            <label>Nome:</label>
+                            <input type="text">
+                        </div>
+            
+                        <div>
+                            <div>
+                                <label>CPF:</label>
+                                <input type="text" maxlength="14">
+                            </div>
+                            <div>
+                                <label>Sexo:</label>
+                                <select name="sexo" id="sexo">
+                                    <option value="Feminino">Feminino</option>
+                                    <option value="Masculino">Masculino</option>
+                                    <option value="Transgenero">Transgenero</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div>
+                            <label>Telefone:</label>
+                            <input type="text" maxlength="14">
+                        </div>
+                    </div>
+                    <button>Cadastrar</button>
+                </form>
             </section>
-            <section id="register-product" class="content-section hidden">
-                <h1>Cadastrar Produto</h1>
+            <section id="register-product" class="register-product content-section hidden">
+                <form>
+                    <h1>Cadastrar Produto</h1>
+                    <div>
+                        <div>
+                            <label>Nome:</label>
+                            <input type="text">
+                        </div>
+                        <div>
+                            <div>
+                                <label>Preço:</label>
+                                <input type="text">
+                            </div>
+                            <div>
+                                <label>Código:</label>
+                                <input type="text">
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                <label>Estoque:</label>
+                                <input type="text">
+                            </div>
+                            <div>
+                                <label>Categoria:</label>
+                                <select name="sexo" id="sexo">
+                                    <option value="actionFigure">Action Figure</option>
+                                    <option value="jogos">Jogos</option>
+                                    <option value="acessorios">Acessórios</option>
+                                    <option value="consolesRetro">Consoles Retro</option>
+                                    <option value="camisetasTemáticas">Camisetas Temáticas</option>
+                                    <option value="moletonsJaquetas">Moletons e Jaquetas</option>
+                                    <option value="funkoPop">Funko Pop</option>
+                                    <option value="estatuasMiniaturas">Estátuas e Miniaturas</option>
+                                    <option value="cardsColecionáveis">Cards Colecionáveis</option>
+                                    <option value="hq">HQ</option>
+                                    <option value="mangas">Mangás</option>
+                                    <option value="rpg">RPG</option>
+                                    <option value="jogosCartas">Jogos de cartas</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div>
+                            <label>Descrição:</label>
+                            <textarea name="desc" id="desc" rows="3"></textarea>
+                        </div>
+                    </div>
+                    <button>Cadastrar</button>
+                </form>
             </section>
             <section id="register-sale" class="content-section hidden">
                 <h1>Cadastrar Venda</h1>

@@ -1,13 +1,16 @@
-.panelSidebar{
+.panel-sidebar{
     background: #252525;
     color: snow;
-    width: 20vw;
+    width: 22.5vw;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     align-items: center;
     justify-content: space-between;
     gap: 6vh;
+    z-index: 10000;
+    -webkit-box-shadow: 3px 0px 15px 0px rgba(0,0,0,0.30); 
+    box-shadow: 3px 0px 15px 0px rgba(0,0,0,0.30);
 }
 .menu-item {
     cursor: pointer;
@@ -22,7 +25,7 @@
     background-color: rgba(255, 255, 255, 0.2); /* Destaque */
     border-left: 4px solid #333; /* Detalhe visual "Pro" */
 }
-.panelSidebar > header{
+.panel-sidebar > header{
     height: 30%;
     width: auto;
     display: flex;
@@ -32,11 +35,11 @@
     justify-content: flex-end;
 }
 
-.panelSidebar > header > img{
+.panel-sidebar > header > img{
     width: 8vw;
 }
 
-.panelSidebar > main{
+.panel-sidebar > main{
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -48,7 +51,7 @@
 
 
 
-.panelSidebar > main > li {
+.panel-sidebar > main > li {
     display: flex;
     flex-wrap: nowrap;
     height: auto;
@@ -58,7 +61,7 @@
     justify-content: center;
 }
 
-.panelSidebar > main > li > ul {
+.panel-sidebar > main > li > ul {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -71,23 +74,23 @@
     gap: 0.5vw;
 }
 
-.panelSidebar > main > li > ul > div {
+.panel-sidebar > main > li > ul > div {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     align-items: center;
-    width: 80%;
+    width: 70%;
     gap: 1vw;
     justify-content: flex-start;
     color: #FFFFFF;
     font-size: 1.7vh;
 }
 
-.panelSidebar > main > li > ul > div > img{
+.panel-sidebar > main > li > ul > div > img{
     width: 1.7vw;
 }
 
-.panelSidebar > footer{
+.panel-sidebar > footer{
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -101,7 +104,7 @@
     cursor: pointer;
     gap: 0.5vw;
 }
-.panelSidebar > footer > div{
+.panel-sidebar > footer > div{
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -110,6 +113,6 @@
     justify-content: start;
     gap: 1vw;
 }
-.panelSidebar > footer > div > img{
+.panel-sidebar > footer > div > img{
     height: 3vh;
 }
