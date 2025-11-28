@@ -1,0 +1,23 @@
+# ---------------------------------------------------------------- #
+# IGNORAR ARQUIVOS GERAIS DE PROJETOS DE DESENVOLVIMENTO
+# ---------------------------------------------------------------- #
+.DS_Store
+Thumbs.db
+*.log
+
+# ---------------------------------------------------------------- #
+# IGNORAR ARQUIVOS E PASTAS DO SERVIDOR DE MOCK (Node.js)
+# ---------------------------------------------------------------- #
+
+GGeek_MockServer/node_modules/
+GGeek_MockServer/package-lock.json
+
+# ---------------------------------------------------------------- #
+# OUTROS ARQUIVOS/PASTAS ESPECÍFICOS DO PROJETO JAVA
+# ---------------------------------------------------------------- #
+*.class
+# Se usar Maven:
+/target/
+# Se usar IDEs como IntelliJ ou VS Code
+.idea/
+.vscode/
