@@ -1,0 +1,81 @@
+# 🌟 Gerenciamento Geek - Technical Mentorship & Advisory
+
+This repository serves as a **technical advisory and implementation support center** for the "Gerenciamento Geek (GG)" final course project, developed by Vitória Rodrigues Ferreira.
+
+My role is to provide specialized technical guidance, assist with architecture design, and support the implementation of key features for the system.
+
+---
+
+## 🚀 Project Overview: Gerenciamento Geek (GG)
+
+The Gerenciamento Geek system is designed as a comprehensive management solution for the **Geek Station** retail store. Its primary goal is to **optimize operational control** by streamlining inventory management, sales processing, and customer data handling.
+
+This solution aims to provide management with a clear, panoramic view of store performance while equipping staff with essential tools for customer service, quick product lookups, and transaction processing.
+
+| Detail | Specification |
+| :--- | :--- |
+| **System Name** | Gerenciamento Geek (GG) |
+| **Version** | 1.01 |
+| **Developed For** | Geek Station Retail Store |
+| **Core Purpose** | Stock Control, Sales Processing, and Customer Data Management |
+
+---
+
+## 🏗️ Technical Specifications & Stack
+
+The core system infrastructure and development choices are defined as follows:
+
+* **Programming Language:** Java
+* **Graphical User Interface (GUI):** Java Swing
+* **Data Persistence:** JDBC and Hibernate
+* **Database Management System (DBMS):** MySQL (SQL)
+
+---
+
+## 🔒 Access Roles and Permissions (Role-Based Access Control - RBAC)
+
+The system integrates distinct functionalities tailored to different access profiles, ensuring robust information flow management through strict permissioning.
+
+| Profile | Key Permissions | Main Responsibilities |
+| :--- | :--- | :--- |
+| **Admin** | Unrestricted access to all system functionalities. | System oversight, full data management. |
+| **Manager** | Full access to all registration, reports, and operational features. | Daily operations, reporting, staff management. **(Restricted from deleting sales records)**. |
+| **Attendant** | Access to create/view Customer and Product lists/records. | Customer service, product management (RF011). |
+| **Cashier** | Access to create/view Customer, Product, and Sales lists/records. | Sales registration (RF003). |
+
+---
+
+## ✅ Core Functional Requirements (RF)
+
+The system is built around managing four main entities and ensuring efficient operational flow:
+
+### 1. Entity Management & Registration
+* **RF001 – Customer Registration:** Required by Attendant and Cashier profiles. (Mandatory Data: Name, CPF, Phone, Gender).
+* **RF002 – Product Registration:** Required by Attendant profile. (Mandatory Data: Name, Price, Code, Stock Quantity, Category, Description).
+* **RF003 – Sales Registration:** Required by Cashier profile. (Mandatory Data: Product, Sale Date, Sale Code, Unit Price, Quantity, Linked Customer).
+* **RF004 – Employee Registration:** Required by Administrator and Manager profiles. (Mandatory Data: Name, CPF, Address details, Position).
+
+### 2. Inquiry and Listing
+* **RF005 / RF006 / RF007:** System must allow authorized staff to **Consult** detailed records for Customers, Products, and Sales.
+* **RF008 / RF009 / RF010:** System must present comprehensive **Listing Tables** for Customers, Products, and Sales History for all staff.
+    * *Extra Permissions:* Admins/Managers can Edit and/or Delete records in these listings (with specific sales deletion restriction for Managers).
+
+### 3. Operational Features
+* **RF011 – Catalog Maintenance:** Attendant must be able to add, edit, and remove products from the catalog.
+* **RF012 – Payment Methods:** System must process Credit Card, Debit Card, and Cash payments.
+
+---
+
+## 🛡️ Non-Functional Requirements (RNF)
+
+The system prioritizes the following non-functional aspects:
+
+* **RNF001 – Usability:** Intuitive and user-friendly interface for non-advanced technical users.
+* **RNF002 – Security:** Strict **Authentication** (login/password storage via encryption) and **Authorization** (Role-Based Access Control - RBAC) are mandatory. All financial transactions must be protected and logged.
+* **RNF003 – Reliability:** Implementation of regular backup routines to mitigate data loss risks.
+
+---
+
+### **Need to collaborate or inquire about the technical implementation?**
+
+Feel free to reach out to the project developer, Vitória Rodrigues Ferreira, or the technical mentor (via this repository's owner).
