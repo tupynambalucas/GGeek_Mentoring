@@ -1,0 +1,22 @@
+{
+  "name": "@ggeek/mentoring-monorepo",
+  "version": "1.0.0",
+  "author": "Vitória Rodrigues Ferreira",
+  "private": true,
+  "workspaces": [
+    "packages/front",
+    "packages/mockserver"
+  ],
+  "scripts": {
+    "install:all": "npm install",
+    
+    "front:dev": "npm run dev -w @ggeek/front",
+    "front:build": "npm run build -w @ggeek/front",
+    "server:dev": "npm run dev -w @ggeek/mockserver",
+    
+    "dev": "concurrently \"npm run server:dev\" \"npm run front:dev\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

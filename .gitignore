@@ -4,21 +4,14 @@
 .DS_Store
 Thumbs.db
 *.log
+node_modules/
+/package-lock.json
 
 # ---------------------------------------------------------------- #
 # IGNORAR ARQUIVOS E PASTAS DO VITE FRONTEND (Node.js)
 # ---------------------------------------------------------------- #
 
-GGeek_Front/node_modules/
-GGeek_Front/dist/
-GGeek_Front/package-lock.json
-
-# ---------------------------------------------------------------- #
-# IGNORAR ARQUIVOS E PASTAS DO SERVIDOR DE MOCK (Node.js)
-# ---------------------------------------------------------------- #
-
-GGeek_MockServer/node_modules/
-GGeek_MockServer/package-lock.json
+packages/front/dist/
 
 # ---------------------------------------------------------------- #
 # OUTROS ARQUIVOS/PASTAS ESPECÍFICOS DO PROJETO JAVA

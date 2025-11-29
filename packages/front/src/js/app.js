@@ -1,4 +1,10 @@
 import gsap from 'gsap';
+import '@/main.css';                     
+import '@css/login.css';
+import '@css/panel/main.css';
+import '@css/panel/sidebar.css';
+import '@css/panel/screens/register-customer.css';
+import '@css/panel/screens/register-product.css';
 
 const App = {
     elements: {

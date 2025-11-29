@@ -1,7 +1,7 @@
 {
-  "name": "ggeek_front",
+  "name": "@ggeek/front",
   "version": "1.0.0",
-  "author": "",
+  "private": true,
   "license": "ISC",
   "type": "module",
   "description": "",
