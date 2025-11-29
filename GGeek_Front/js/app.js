@@ -6,7 +6,6 @@ const App = {
             login: document.getElementById('login-view'),
             panel: document.getElementById('panel-view')
         },
-        // Novos elementos para a animação específica
         sidebar: document.querySelector('.panel-sidebar'),
         panelMain: document.querySelector('#panel-view > main'),
         
@@ -49,45 +48,32 @@ const App = {
         const pass = document.getElementById('login-pass').value;
 
         if(email && pass) {
-            // Cria uma Timeline para sequenciar as animações
             const tl = gsap.timeline();
-
-            // PASSO 1: Fade Out do Login
             tl.to(this.elements.views.login, {
                 opacity: 0,
                 duration: 0.5,
                 onComplete: () => {
-                    // Troca as classes CSS para esconder login e mostrar painel
                     this.elements.views.login.classList.add('hidden');
                     this.elements.views.panel.classList.remove('hidden');
                 }
             });
-
-            // PASSO 2: Preparar o terreno (Estado Inicial invisível)
-            // Define a sidebar com largura 0 e esconde o conteúdo excedente para não quebrar o layout
             tl.set(this.elements.sidebar, { width: 0, overflow: 'hidden', whiteSpace: 'nowrap' });
-            // Define o conteúdo principal como invisível
             tl.set(this.elements.panelMain, { opacity: 0 });
 
-            // PASSO 3: Animação da Sidebar Crescendo
             tl.to(this.elements.sidebar, {
-                width: "22.5vw", // O tamanho original definido no seu CSS
-                duration: 0.8,   // Tempo da animação
+                width: "22.5vw", 
+                duration: 0.8,
                 ease: "power2.out"
             });
 
-            // PASSO 4: Fade In do Conteúdo Principal (Main)
             tl.to(this.elements.panelMain, {
                 opacity: 1,
                 duration: 0.6,
                 onStart: () => {
-                    // Carrega a primeira tela assim que o main começar a aparecer
                     this.navigateTo('register-customer');
                     this.updateMenuState(this.elements.menuItems[0]);
                 },
                 onComplete: () => {
-                    // Limpa estilos inline que o GSAP colocou na sidebar para o CSS voltar a mandar
-                    // Isso é importante para o responsivo ou hovers funcionarem bem depois
                     gsap.set(this.elements.sidebar, { clearProps: "overflow,whiteSpace" });
                 }
             });
@@ -106,8 +92,6 @@ const App = {
                     this.elements.views.panel.classList.add('hidden');
                     this.elements.views.login.classList.remove('hidden');
                     this.elements.views.login.style.opacity = 1;
-                    
-                    // Reseta estilos caso o usuário logue de novo sem recarregar
                     gsap.set(this.elements.sidebar, { clearProps: "all" });
                     gsap.set(this.elements.panelMain, { clearProps: "all" });
                     
