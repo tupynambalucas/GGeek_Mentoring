@@ -9,7 +9,7 @@
 .panel > main {
     width: 100%;
     height: 100%;
-    background: yellow;
+    background-color: #F4F4F4;
 }
 
 .hidden { display: none !important; }

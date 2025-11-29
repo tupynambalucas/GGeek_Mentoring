@@ -1,6 +1,5 @@
 .panel-sidebar{
-    background: #252525;
-    color: snow;
+    background-color: #0f0f0fe5;
     width: 22.5vw;
     display: flex;
     flex-direction: column;
@@ -9,8 +8,9 @@
     justify-content: space-between;
     gap: 6vh;
     z-index: 10000;
-    -webkit-box-shadow: 3px 0px 15px 0px rgba(0,0,0,0.30); 
-    box-shadow: 3px 0px 15px 0px rgba(0,0,0,0.30);
+    -webkit-box-shadow: 2px 0px 10px 0px rgba(255, 255, 255, 0.3); 
+    box-shadow: 2px 0px 10px 0px rgba(255, 255, 255, 0.3);
+    /* border-right: solid 0.1vw #0f0f0f; */
 }
 .menu-item {
     cursor: pointer;
@@ -18,13 +18,20 @@
 }
 
 .menu-item:hover {
-    background-color: rgba(0,0,0,0.05); 
+    background-color: rgba(244, 244, 244, 0.829); 
+}
+.menu-item:hover > div > p {
+    color: rgba(101, 135, 248, 0.884); 
+}
+.menu-item.active {
+    background-color: rgba(244, 244, 244, 0.884); 
+    border-right: 0.2vw solid rgb(68, 80, 245); 
 }
 
-.menu-item.active {
-    background-color: rgba(255, 255, 255, 0.2); /* Destaque */
-    border-left: 4px solid #333; /* Detalhe visual "Pro" */
+.menu-item.active > div > p {
+    color: rgba(101, 135, 248, 0.884);
 }
+
 .panel-sidebar > header{
     height: 30%;
     width: auto;
@@ -82,7 +89,7 @@
     width: 70%;
     gap: 1vw;
     justify-content: flex-start;
-    color: #FFFFFF;
+    color: #F4F4F4;
     font-size: 1.7vh;
 }
 
