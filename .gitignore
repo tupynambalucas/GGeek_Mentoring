@@ -6,6 +6,14 @@ Thumbs.db
 *.log
 
 # ---------------------------------------------------------------- #
+# IGNORAR ARQUIVOS E PASTAS DO VITE FRONTEND (Node.js)
+# ---------------------------------------------------------------- #
+
+GGeek_Front/node_modules/
+GGeek_Front/dist/
+GGeek_Front/package-lock.json
+
+# ---------------------------------------------------------------- #
 # IGNORAR ARQUIVOS E PASTAS DO SERVIDOR DE MOCK (Node.js)
 # ---------------------------------------------------------------- #
 

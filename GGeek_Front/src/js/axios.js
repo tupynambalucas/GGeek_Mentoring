@@ -1,4 +1,4 @@
-import axios from 'https://cdn.skypack.dev/axios';
+import axios from 'axios';
 
 const api = axios.create({
     baseURL: 'url aqui',
